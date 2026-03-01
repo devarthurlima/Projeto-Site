@@ -3,16 +3,32 @@
     font-size: 16px;
 }
 
+/* make every image responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     background-color: #acacff
 }
 
 main {
     background-color: white;
-    width: 560px;
+    max-width: 560px; /* limit for large screens */
+    width: 90%;          /* fluid width for smaller devices */
     margin: auto;
     padding: 10px;
-    box-shadow: 3px 3px 5px rgba(red, green, blue, alpha) ;
+    box-shadow: 3px 3px 5px rgba(red, green, blue, alpha);
+}
+
+/* make embedded videos scale with their container */
+iframe {
+    width: 100%;
+    max-width: 560px; /* default embed width */
+    height: auto !important;      /* override inline height */
+    aspect-ratio: 16 / 9;         /* maintain 16:9 ratio */
+    display: block;               /* remove inline spacing */
 }
 
 h1 {
@@ -27,6 +43,15 @@ h2 {
 
 img.lado {
     float: right;
+    max-width: 40%;           /* prevent overly large images */
+    margin: 0 0 10px 10px;    /* spacing when floated */
+}
+
+/* clear floats inside articles if necessary */
+article::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 a {

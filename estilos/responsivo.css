@@ -1,0 +1,33 @@
+/* general adjustments for tablets and smaller */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    img.lado {
+        float: none;
+        display: block;
+        margin: auto;
+        max-width: 80%;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* extra small phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 5px;
+    }
+}
